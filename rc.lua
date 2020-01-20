@@ -2,8 +2,6 @@ home = "/home/quisl/" --your home directory
 configpath = "/home/quisl/.config/awesome/" --path to this awesome configuration (usually ~/.config/awesome)
 themeconfigpath = configpath.."theme/"
 highcontrasticonpath = "/usr/share/icons/HighContrast/scalable/status/"-- path to your iconlist
-
-vgaenabled = false --change to true if you want to enable dual screen per default
 -- You can get your openweathermap key for free from https://openweathermap.org/.
 -- If you do not want to use the weather widget just leave the following lines empty
 pathToOpenmap = "/home/quisl/.config/openweathermapkey" -- path to a file with an openweathermap key
@@ -64,7 +62,8 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 --beautiful.init(themeconfigpath.."/theme.lua")
-beautiful.init(awful.util.getdir("config").."/custom/theme.lua")
+themename = "custom"
+beautiful.init(awful.util.getdir("config").."/"..themename.."/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 editor = os.getenv("EDITOR") or "editor"
@@ -290,23 +289,11 @@ globalkeys = awful.util.table.join(
 awful.key({ }, "#68", function () awful.spawn("pactl set-sink-volume 0 -10%") end, {description = "decrease volume", group = "custom"}),
 awful.key({ }, "#69", function () awful.spawn("pactl set-sink-volume 0 +10%") end, {description = "increase volume", group = "custom"}),
 awful.key({ }, "#67", function () awful.spawn("amixer set Master +1 toggle") end, {description = "mute volume", group = "custom"}),
-awful.key({ }, "XF86TouchpadToggle",
-function ()
-  if vgaenabled == true then
-    awful.spawn("sh "..configpath.."scripts/No-Screen.sh")
-    vgaenabled = false
-  else
-    awful.spawn("sh "..configpath.."scripts/VGA-Screen.sh")
-    vgaenabled = true
-  end
-end, {description = "Toggle second screen", group ="custom"}),
-
-
-    awful.key({ modkey,           }, "j",
-        function ()
-            awful.client.focus.byidx( 1)
-        end,
-        {description = "focus next by index", group = "client"}
+awful.key({ modkey,           }, "j",
+    function ()
+        awful.client.focus.byidx( 1)
+    end,
+    {description = "focus next by index", group = "client"}
     ),
     awful.key({ modkey,           }, "k",
         function ()
