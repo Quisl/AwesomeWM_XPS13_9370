@@ -62,8 +62,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 --beautiful.init(themeconfigpath.."/theme.lua")
-themename = "custom"
-beautiful.init(awful.util.getdir("config").."/"..themename.."/theme.lua")
+beautiful.init(awful.util.getdir("config").."/qtheme/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 editor = os.getenv("EDITOR") or "editor"
