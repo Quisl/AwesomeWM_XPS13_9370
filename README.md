@@ -103,6 +103,7 @@ sudo apt-get install korean*
 ```
 
 ### Screen locker: xsecurelock
+I use xsecurelock to lock my screen. It will be bound to [ctrl]+[l].
 
 ```
 sudo apt-get install xsecurelock
@@ -112,6 +113,12 @@ sudo apt-get install xsecurelock
 
 We do not need to install this, it comes with Debian.
 
+### Audio
+
+I use pasystray as audio manager.
+
+sudo apt-get install pasystray
+sudo apt-get install pavucontrol
 
 ### Terminal misc...
 
