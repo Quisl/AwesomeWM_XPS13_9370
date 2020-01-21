@@ -1,6 +1,7 @@
 --[[The MIT License (MIT)
 
-Modified by Jonas 'Quisl' Rabe
+Modified 2020 by Jonas Christian Rabe aka Quisl (https://github.com/Quisl)
+
 Original from Copyright (c) 2017 streetturtle ( https://github.com/streetturtle/AwesomeWM )
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
