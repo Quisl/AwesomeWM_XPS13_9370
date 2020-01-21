@@ -296,27 +296,26 @@ globalkeys = awful.util.table.join(
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
-              -- Screenshot
-              awful.key({ }, "Print",function()
-                  awful.util.spawn("screengrab") end, {description = "Screenshot", group = "custom"}),
-              -- Brightness
-              awful.key({ }, "XF86MonBrightnessDown", function ()
-                  awful.util.spawn("xbacklight -dec 5") end, {description = "decrease brightness", group = "custom"}),
-              awful.key({ }, "XF86MonBrightnessUp", function ()
-                  awful.util.spawn("xbacklight -inc 5") end, {description = "increase brightness", group = "custom"}),
-              awful.key({"Control" }, "l",function()
-                  awful.util.spawn("xsecurelock") end, {description = "Lock screen", group = "custom"}),
-  
+    -- Screenshot
+    awful.key({ }, "Print",function()
+        awful.util.spawn("screengrab") end, {description = "Screenshot", group = "custom"}),
+    -- Brightness
+    awful.key({ }, "XF86MonBrightnessDown", function ()
+        awful.util.spawn("xbacklight -dec 5") end, {description = "decrease brightness", group = "custom"}),
+    awful.key({ }, "XF86MonBrightnessUp", function ()
+        awful.util.spawn("xbacklight -inc 5") end, {description = "increase brightness", group = "custom"}),
+    awful.key({"Control" }, "l",function()
+        awful.util.spawn("xsecurelock") end, {description = "Lock screen", group = "custom"}),
 -- audio
 
-awful.key({ }, "#68", function () awful.spawn("pactl set-sink-volume 0 -10%") end, {description = "decrease volume", group = "custom"}),
-awful.key({ }, "#69", function () awful.spawn("pactl set-sink-volume 0 +10%") end, {description = "increase volume", group = "custom"}),
-awful.key({ }, "#67", function () awful.spawn("amixer set Master +1 toggle") end, {description = "mute volume", group = "custom"}),
-awful.key({ modkey,           }, "j",
-    function ()
-        awful.client.focus.byidx( 1)
-    end,
-    {description = "focus next by index", group = "client"}
+    awful.key({ }, "#68", function () awful.spawn("pactl set-sink-volume 0 -10%") end, {description = "decrease volume", group = "custom"}),
+    awful.key({ }, "#69", function () awful.spawn("pactl set-sink-volume 0 +10%") end, {description = "increase volume", group = "custom"}),
+    awful.key({ }, "#67", function () awful.spawn("amixer set Master +1 toggle") end, {description = "mute volume", group = "custom"}),
+    awful.key({ modkey,           }, "j",
+        function ()
+            awful.client.focus.byidx( 1)
+        end,
+        {description = "focus next by index", group = "client"}
     ),
     awful.key({ modkey,           }, "k",
         function ()
