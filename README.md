@@ -6,6 +6,8 @@ I run Linux via Debian 10 bullseye (testing). You can still use this if you run 
 
 # Setup
 
+I wrote this readme from memory. Please inform me about bugs!
+
 ## Prerequisites
 
 I will quickly go through every additional tool and describe how I made it run and what I used it for.
