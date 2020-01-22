@@ -308,9 +308,9 @@ globalkeys = awful.util.table.join(
         awful.util.spawn("xsecurelock") end, {description = "Lock screen", group = "custom"}),
 -- audio
 
-    awful.key({ }, "#68", function () awful.spawn("pactl set-sink-volume 0 -10%") end, {description = "decrease volume", group = "custom"}),
-    awful.key({ }, "#69", function () awful.spawn("pactl set-sink-volume 0 +10%") end, {description = "increase volume", group = "custom"}),
-    awful.key({ }, "#67", function () awful.spawn("amixer set Master +1 toggle") end, {description = "mute volume", group = "custom"}),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%") end, {description = "decrease volume", group = "custom"}),
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%") end, {description = "increase volume", group = "custom"}),
+    awful.key({ }, "XF86AudioMute", function () awful.spawn("amixer set Master +1 toggle") end, {description = "mute volume", group = "custom"}),
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
@@ -640,7 +640,7 @@ awful.util.spawn("xfce4-power-manager")
 
 --a pplets that might run multiple instances (I add these with a script to make sure they run only once)
 -- Check if pasystray is running and start if its not:
-awful.spawn.easy_async("bash -c 'ps -ef | grep pasystray | wc -l'", 
+awful.spawn.easy_async("bash -c 'ps -ef | grep pasystray | wc -l'",
     function(stdout, stderr, reason, exit_code)
         if (tonumber(stdout)) < 3 then
         awful.spawn("pasystray")
@@ -655,3 +655,4 @@ awful.spawn.easy_async("bash -c 'ps -ef |grep redshift | wc -l'", function(stdou
         awful.spawn("bash -c 'sleep 5 ; redshift'")
       end
   end)
+

@@ -71,6 +71,14 @@ sudo apt-get install apt-transport-https
 sudo apt-get install code # or code-insiders
 ```
 
+### Awesome
+Install the Awesome and Awesome-Extras packages for Debian:
+
+```
+sudo apt-get install awesome
+sudo apt-get install awesome-extra
+```
+
 ### Terminal text editor: vim
 
 Vim is awesome. Thats why I use Vim in Awesome. Install it like this:
