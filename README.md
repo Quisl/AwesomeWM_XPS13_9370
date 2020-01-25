@@ -81,6 +81,12 @@ sudo apt-get install awesome
 sudo apt-get install awesome-extra
 ```
 
+### Set Python to Python3
+
+```
+sudo apt-get install python3-pip 
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 2
+```
 ### Terminal text editor: vim
 
 Vim is awesome. Thats why I use Vim in Awesome. Install it like this:
