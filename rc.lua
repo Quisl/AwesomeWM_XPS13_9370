@@ -298,7 +298,7 @@ globalkeys = awful.util.table.join(
               {description = "go back", group = "tag"}),
     -- Screenshot
     awful.key({ }, "Print",function()
-        awful.util.spawn("screengrab") end, {description = "Screenshot", group = "custom"}),
+        awful.util.spawn("screengrab -r") end, {description = "Screenshot", group = "custom"}),
     -- Brightness
     awful.key({ }, "XF86MonBrightnessDown", function ()
         awful.util.spawn("xbacklight -dec 5") end, {description = "decrease brightness", group = "custom"}),
