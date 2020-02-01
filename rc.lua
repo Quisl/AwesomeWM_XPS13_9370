@@ -311,6 +311,11 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86AudioLowerVolume", function () awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%") end, {description = "decrease volume", group = "custom"}),
     awful.key({ }, "XF86AudioRaiseVolume", function () awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%") end, {description = "increase volume", group = "custom"}),
     awful.key({ }, "XF86AudioMute", function () awful.spawn("amixer set Master +1 toggle") end, {description = "mute volume", group = "custom"}),
+    awful.key({ }, "#67", function () awful.spawn("amixer set Master +1 toggle") end, {description = "mute volume", group = "custom"}),
+    awful.key({ }, "#68", function () awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%") end, {description = "decrease volume", group = "custom"}),
+    awful.key({ }, "#69", function () awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%") end, {description = "increase volume", group = "custom"}),
+
+
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)

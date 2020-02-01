@@ -72,4 +72,4 @@ elif cpu < 70:
   cpucolor = "yellow"
 elif cpu < 100:
   cpucolor = "pink"
-print "<span foreground='lightblue'>RAM</span> <span foreground='"+memcolor+"'>"+str(memory)+"%</span> <span foreground='lightblue'>CPU</span> <span foreground='"+cpucolor+"'>"+str(cpu)+"%</span>"
+print ("<span foreground='lightblue'>RAM</span> <span foreground='"+memcolor+"'>"+str(memory)+"%</span> <span foreground='lightblue'>CPU</span> <span foreground='"+cpucolor+"'>"+str(cpu)+"%</span>")
